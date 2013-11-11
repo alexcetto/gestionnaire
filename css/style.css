@@ -1,0 +1,43 @@
+body,html{
+	width:100%;
+	height:100%;
+	margin: 0;
+	padding: 0;
+}
+
+.conteneur{
+	width:90%;
+	margin: auto;
+}
+
+.bouton .vert {
+	background: none;
+	color: green;
+}
+#contenu .vert {
+	background: none;
+	color: green;
+}
+#contenu .rouge {
+	background: none;
+	color: red;
+}
+#contenu .gris {
+	background: none;
+	color: #AAA;
+}
+
+.checkStand{
+
+}
+
+.showStand{
+	display: block;
+	margin: 10px auto;
+	padding: 20px 0 20px 0;
+	text-align: center;
+	font-size: 1.4em;
+	border: 1px solid #AAA;
+	box-shadow: 0 0 4px #AAA;
+	background: white;
+}
