@@ -17,11 +17,12 @@
 			<a href="desktop" data-ajax="false">Vers la version bureau</a>
 		</div>
 		<article class='left w60 p10 boutons' id="contenu">
+			Coché == Présent sur le stand
 			<?php 
 				$rows = fetchCompData('');
 
 				foreach($rows as $row) {
-			        print ("<label for='$row[id]'>$row[name]</label><input type='checkbox' name='$row[name]' id='$row[id]' class='checkStand'");
+			        print ("<label for='$row[id]'>$row[name]</label><input class='pres' type='checkbox' name='$row[name]' id='$row[id]' class='checkStand'");
 			        	if($row[attending]=='1') print('checked');
 			        print(" />");
 			    }
