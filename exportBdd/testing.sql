@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Lun 11 Novembre 2013 à 16:35
+-- Généré le: Dim 24 Novembre 2013 à 17:07
 -- Version du serveur: 5.6.14
 -- Version de PHP: 5.4.17
 
@@ -28,13 +28,13 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `company` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `state` tinyint(1) NOT NULL,
+  `state` tinyint(1) NOT NULL DEFAULT '0',
   `name` varchar(64) NOT NULL,
-  `page` int(11) NOT NULL,
+  `page` int(11) DEFAULT NULL,
   `room` varchar(4) NOT NULL,
   `attending` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
 --
 -- Contenu de la table `company`
@@ -42,9 +42,12 @@ CREATE TABLE IF NOT EXISTS `company` (
 
 INSERT INTO `company` (`id`, `state`, `name`, `page`, `room`, `attending`) VALUES
 (1, 1, 'Company 1', 1, '101', 1),
-(2, 1, 'Company 2', 2, '101', 1),
-(3, 0, 'Company 3', 2, '102', 1),
-(4, 0, 'Company 4', 2, '102', 0);
+(2, 1, 'Company 2', 2, '101', 0),
+(3, 0, 'ChangÃ©', 2, '104', 1),
+(4, 1, 'Entreprise 3', 2, '102', 1),
+(6, 0, 'Nomdel''entreprise', NULL, '104', 1),
+(7, 1, 'entreprise', NULL, '104', 1),
+(8, 0, 'Entreprise changÃ©e', NULL, '103', 1);
 
 -- --------------------------------------------------------
 
@@ -55,6 +58,26 @@ INSERT INTO `company` (`id`, `state`, `name`, `page`, `room`, `attending`) VALUE
 CREATE TABLE IF NOT EXISTS `countvisitors` (
   `counter` int(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `rooms`
+--
+
+CREATE TABLE IF NOT EXISTS `rooms` (
+  `name` varchar(4) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `rooms`
+--
+
+INSERT INTO `rooms` (`name`) VALUES
+('101'),
+('102'),
+('104'),
+('103');
 
 -- --------------------------------------------------------
 
