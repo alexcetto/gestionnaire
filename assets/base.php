@@ -14,7 +14,7 @@ function fetchCompData($param) {
     global $bdd;
     
     if($param != ''){
-        $rows = $bdd->query("SELECT * from company where id=$param");
+        $rows = $bdd->query("SELECT * from company where room=$param");
         return $rows;
     } else {
     	 $rows = $bdd->query("SELECT * from company");

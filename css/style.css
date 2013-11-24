@@ -14,15 +14,15 @@ body,html{
 	background: none;
 	color: green;
 }
-#contenu .vert {
+ .vert {
 	background: none;
 	color: green;
 }
-#contenu .rouge {
+ .rouge {
 	background: none;
 	color: red;
 }
-#contenu .gris {
+ .gris {
 	background: none;
 	color: #AAA;
 }

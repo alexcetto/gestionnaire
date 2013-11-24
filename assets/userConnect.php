@@ -12,7 +12,7 @@ if(isset($_POST['login']) && isset($_POST['pwd'])){
 }
 
 $name = sanitizr($name);
-$pwd = sanitizr($pwd);
+$pwd  = sanitizr($pwd);
 
 $userQuery = $bdd->prepare("SELECT * FROM users where login='$name'");
 $userQuery -> execute();

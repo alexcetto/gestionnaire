@@ -18,16 +18,14 @@
 			<a href="desktop" data-ajax="false">Vers la version bureau</a>
 		</div>
 		<article class='left w60 p10 boutons' id="contenu">
-		Coché = occupé
-			<?php 
-				$rows = fetchCompData('');
 
-				foreach($rows as $row) {
-			        print ("<label for='$row[id]'>$row[name]</label><input type='checkbox' class='occup' name='$row[name]' id='$row[id]' class='checkStand'");
-			        	if($row['state']=='1') print('checked');
-			        print(" />");
-			    }
-			?>
+			<form action="assets/addFirm.php" method="POST" data-ajax="false">
+			<label for="idFirm">Id (laisser vide si nvl entrée)</label><input type="text" id="idFirm" name="idFirm" />
+				<label for="firmName">Nom de l'entreprise</label><input type="text" name="firmName" id="firmName" />
+				<label for="room">Numéro de la salle (3carac)</label><input type="text" size="3" name="room" id="room">
+				<input type="submit" value="Soumets-moi" >
+			</form>
+
 		</article>
 
 

@@ -1,3 +1,5 @@
+var roomVar = '';
+
 $(function(){
 
     $("input.occup").click(function a(){
@@ -27,10 +29,19 @@ $(function(){
 				console.log( "error" );
 			});
 	});
+
+	 $("#roomVar").keyup(function(){ roomVar = $(this).val();});
+
 });
 
+
 function refreshTable(){
-    $('#contenu').load('./assets/refreshStatus.php', function(){
+    $('#contenu').load('./assets/refreshStatus.php?r='+roomVar, function(){
     	setTimeout(refreshTable, 1000);
+    });
+}
+function refreshTableGlobal(){
+    $('#contenuGlobal').load('./assets/refreshstatusglobal.php', function(){
+    	setTimeout(refreshTableGlobal, 1000);
     });
 }

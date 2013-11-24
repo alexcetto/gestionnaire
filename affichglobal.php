@@ -4,14 +4,13 @@
 	include 'assets/headings.php';
 ?>
 
-<body class="mw960p center" onload="refreshTable();">
+<body class="mw960p center" onload="refreshTableGlobal();">
 	<div class='conteneur mw960p'>
 		<header>
-			<h1>Gestionnaire de stands</h1>
+			<h1>Affichage global</h1>
 		</header>
 
-		<input type="text" size="4" id="roomVar" />
-		<article class='left w60 p10 boutons' id="contenu">
+		<article class='left w60 p10 boutons' id="contenuGlobal">
 		<!-- Généré en php -->
 		</article>
 

@@ -1,7 +1,10 @@
 <?php
 	include_once 'base.php';
-	
-	$rows = fetchCompData('');
+
+    if(isset($_GET['r']) && $_GET['r'] != '') $r = $_GET['r'] ;
+    //var_dump($_GET["r"]);
+
+	$rows = fetchCompData($r);
 
 	foreach($rows as $row) {
         print ("<div id='$row[id]' class='showStand "); 

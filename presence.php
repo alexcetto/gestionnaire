@@ -5,6 +5,7 @@
 	}
 
 	include 'assets/headings.php';
+	include 'assets/menu.php';
 ?>
 
 <body class="mw960p center">
