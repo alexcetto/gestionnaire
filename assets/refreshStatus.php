@@ -1,10 +1,16 @@
 <?php
 	include_once 'base.php';
 
-    if(isset($_GET['r']) && $_GET['r'] != '') $r = $_GET['r'] ;
-    //var_dump($_GET["r"]);
+    if(isset($_GET['r']) && $_GET['r'] != '' && strlen($_GET['r']) <= 3) $r = $_GET['r'] ;
+
+    print($r);
 
 	$rows = fetchCompData($r);
+
+    if (!$rows) {
+        return print('Salle non existante');
+    }
+
 
 	foreach($rows as $row) {
         print ("<div id='$row[id]' class='showStand "); 

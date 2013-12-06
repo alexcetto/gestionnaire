@@ -17,7 +17,7 @@ $pwd  = sanitizr($pwd);
 $userQuery = $bdd->prepare("SELECT * FROM users where login='$name'");
 $userQuery -> execute();
 $userQuery = $userQuery -> fetch();
-$xstngPwd = $userQuery['pass'];
+$xstngPwd  = $userQuery['pass'];
 
 if($userQuery && $xstngPwd == $pwd){
     setcookie('login',$name, time() + 365*24*3600, '/', null, false, true);

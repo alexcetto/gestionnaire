@@ -14,6 +14,7 @@
 		</header>
 
 		<article class='left w60 p10 boutons' id="connexion">
+		
 			<form method="post" action="assets/userConnect.php" data-ajax="false">
 				<input type="text" name="login" id="login" placeholder="Login" autofocus="autofocus" />
 				<input type="password" name="pwd" id="pwd" placeholder="Password" />
